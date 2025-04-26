@@ -25,6 +25,10 @@
 
   programs.home-manager.enable = true;
 
+  home.file = {
+    ".config/i3/config".source = dotfiles/i3/.config/i3/config;
+  };
+
   programs.git = {
     enable = true;
     userName = "momoyon";
