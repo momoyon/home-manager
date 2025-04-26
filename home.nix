@@ -16,6 +16,7 @@
     (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
     pkgs.pass
     pkgs.passExtensions.pass-otp
+    pkgs.stow
   ];
 
   #TODO: source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
