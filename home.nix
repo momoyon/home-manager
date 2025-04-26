@@ -17,11 +17,41 @@
     pkgs.pass
     pkgs.passExtensions.pass-otp
     pkgs.stow
+    pkgs.zathura
+    pkgs.xfce.thunar
   ];
 
   #TODO: source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
   home.sessionVariables = {
     EDITOR = "nvim";
+    TERM="kitty";
+    TERMINAL="kitty";
+    BROWSER="floorp";
+    PDF_VIEWER="zathura";
+    FILE_MANAGER="thunar";
+    XDG_CONFIG_HOME="$HOME/.config";
+    XDG_CACHE_HOME="$HOME/.cache";
+    LESSHISTFILE="-";
+    GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0";
+    WINEPREFIXES="$XDG_CONFIG_HOME/wineprefixes";
+    WINEPREFIX="$WINEPREFIXES/default";
+    XINITRC="$XDG_CONFIG_HOME/X11/xinitrc";
+    XSERVERRC="$XDG_CONFIG_HOME/X11/xserverrc";
+    XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority";
+    WGETRC="$XDG_CONFIG_HOME/wgetrc";
+
+    # STEAM_COMPAT_DATA_PATH_BASE="/mnt/internal_hdd/SteamLibrary/steamapps/compatdata";
+    PASSWORD_STORE_DIR="$HOME/.config/password_store";
+    GNUPGHOME="$HOME/.config/gnupg";
+    USERXSESSION="$XDG_CACHE_HOME/X11/xsession";
+    USERXSESSIONRC="$XDG_CACHE_HOME/X11/xsessionrc";
+    ALTUSERXSESSION="$XDG_CACHE_HOME/X11/Xsession";
+    ERRFILE="$XDG_CACHE_HOME/X11/xsession-errors";
+    ZDOTDIR="$XDG_CONFIG_HOME/zsh";
+    MBSYNCRC="$XDG_CONFIG_HOME/mbsync/config";
+    LYNX_CFG="$XDG_CONFIG_HOME/lynx.cfg";
+
+    QT_QPA_PLATFORMTHEME="qt5ct";
   };
 
   programs.home-manager.enable = true;
