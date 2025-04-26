@@ -83,63 +83,6 @@
     };
   };
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-
-    shellAliases = {
-      edit = "sudo -e";
-      nixos-config = "sudo $EDITOR /etc/nixos/configuration.nix";
-      nixos-update = "sudo nixos-rebuild switch";
-      hm-config    = "$EDITOR $HOME/.config/home-manager/home.nix";
-      hm-update    = "home-manager switch";
-      ls="ls --color=auto";
-      dir="dir --color=auto";
-      vdir="vdir --color=auto";
-  
-      grep="grep --color=auto";
-      fgrep="fgrep --color=auto";
-      egrep="egrep --color=auto";
-  
-      ip="ip -color=auto";
-      ll="ls -hl";
-      la="ls -Ah";
-      l="ls -CF";
-      mkdir="mkdir -pv";
-      yt-dlp="yt-dlp --add-metadata -ic";
-      yt-dlpa="yt-dlp --add-metadata -xic";
-      cclip="xclip -selection clipboard";
-      mv="mv -vi";
-      cp="cp -vi";
-      rm="rm -vIdi";
-      gits="git status";
-      gitb="git branch";
-      gitc="git commit";
-      gita="git add";
-      gitr="git remote";
-      gitp="git push";
-      gitd="git diff";
-      gitl="git log --all --decorate --oneline --graph";
-      lgit="lazygit";
-      wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts";
-      v="nvim";
-      fetch="fastfetch";
-      df="df -x tmpfs";
-      
-      # sudo
-      s="sudo systemctl";
-
-    };
-
-    history.size = 10000;
-    history.ignoreAllDups = true;
-    history.path = "$HOME/.zsh_history";
-    history.ignorePatterns = ["rm *" "pkill *" "cp *"];
-  };
-
-
   programs.kitty = {
     enable = true;
     font = {
